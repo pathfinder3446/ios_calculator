@@ -24,6 +24,20 @@ let downscreen = document.querySelector(`.down`);
 
 
 ac.addEventListener(`click`, () => {
-    upscreen.innerText = ``;
+    upscreen.innerText = ` `;
     downscreen.innerText = 0;
+});
+
+pm.addEventListener(`click`, () => {
+    if (downscreen.innerText < 0 || downscreen.innerText > 0){
+        downscreen.innerText *= -1;
+        upscreen.innerText = downscreen.innerText;
+    } else {
+        downscreen.innerText = 0;
+        upscreen.innerText = ` `;
+    }
+});
+
+percent.addEventListener(`click`, () => {
+
 })
